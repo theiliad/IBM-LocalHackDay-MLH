@@ -81,7 +81,7 @@ angular.module('localHackDay')
             });
         }])
         
-        .controller("indexCtrl", function($rootScope, $scope, $mdToast, $state, $stateParams, $mdDialog, $interval, $timeout) {            
+        .controller("indexCtrl", function($rootScope, $scope, $mdToast, $mdDialog) {            
             $scope.schedule = [
                 {title: 'Intro to HTML/CSS', time: '10:00 AM', duration: 30, by: 'Jared Zoneraich', videoID: 'VxKisEkHluw'},
                 {title: 'Intro to Javascript', time: '10:45 AM', duration: 37, by: 'Cassidy Williams', videoID: 'lyh5IXq67UQ'},
@@ -96,4 +96,26 @@ angular.module('localHackDay')
                 {title: 'Intro to Vim', time: '04:45 PM', duration: 18, by: 'Alex Wheeler', videoID: 'Xp0cTB1llqU'},
                 {title: 'Intro to Machine Learning', time: '05:10 PM', duration: 42, by: 'Jamis Johnson', videoID: 'YneNKbK1D1w'}
             ]
-        });
+            
+            $scope.workshopDetails = function(item) {
+                $mdDialog.show({
+                  controller: ['$rootScope', '$scope', '$filter', function ($rootScope, $scope) {
+                      $scope.workshop = item;
+                      
+                      $scope.videoSrc = 'https://www.youtube.com/embed/' + item.videoID + '?autoplay=1';
+                  }],
+                  templateUrl: 'partials/workshopDetails.html',
+                  parent: angular.element(document.body),
+                  clickOutsideToClose: true,
+                  fullscreen: false,
+                  openFrom: '#brand',
+                  closeTo: '#brand'
+                });
+            }
+        })
+        
+        .filter('trustAsResourceUrl', ['$sce', function($sce) {
+            return function(val) {
+                return $sce.trustAsResourceUrl(val);
+            };
+        }]);

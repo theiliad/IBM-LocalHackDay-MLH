@@ -59,7 +59,7 @@
     </style>
     
     <div class="hero-logo">
-        <svg version="1.1" id="Layer_1" class="draw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <svg version="1.1" id="brand" class="draw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="42 -102.7 593.4 504.7" style="enable-background:new 42 -102.7 593.4 504.7;" xml:space="preserve">
         <rect x="-301.7" y="-294.4" style="display:none;fill:#FFFFFF;" width="1280" height="800"/>
         <g>
@@ -1603,8 +1603,8 @@
         </svg>
     </div>
 
-<div layout="row">
-    <md-card flex="75">
+<div layout="row" layout-sm="column" layout-xs="column">
+    <md-card flex="75" flex-sm="100" flex-xs="100">
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">
@@ -1617,34 +1617,24 @@
             </span>
 
             <div class="postContent">
-                <md-list-item ng-click="navigateTo(setting.extraScreen, $event)" ng-repeat="item in schedule">
+                <md-list-item ng-repeat="item in schedule track by $index" ng-click="workshopDetails(item)">
                     <strong style="font-weight: 700; margin-right: 15px;">{{item.time}}</strong>
                     
                     <p>{{item.title}} ({{item.duration}} minutes)</p>
                     
                     <p class="md-secondary" ng-if="item.title != 'Lunch!'">By {{item.by}}</p>
                     
-                    <md-button class="md-secondary md-icon-button" ng-if="item.title != 'Lunch!'">
+                    <md-button class="md-secondary md-icon-button" ng-if="item.title != 'Lunch!'" ng-click="workshopDetails(item)" aria-label="Play">
                         <md-icon class="mdi mdi-play-circle mdi-25px-fix"></md-icon>
                     </md-button>
                 </md-list-item>
             </div>
           </md-card-title-text>
         </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button ng-click="likePost(post.Id)">
-              <md-icon class="mdi mdi-25px" ng-class="{'mdi-thumb-up-outline': !userLiked, 'mdi-thumb-up': userLiked}"></md-icon>
-              {{post.Likes}}
-          </md-button>
-
-          <md-button ng-click="readMore(key)">
-              Read More
-          </md-button>
-        </md-card-actions>
     </md-card>
 
 
-    <md-card flex="25">
+    <md-card flex="25" flex-sm="100" flex-xs="100">
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">
