@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Local Hack Day - Dashboard</title>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel='stylesheet prefetch' href='node_modules/angular-material/angular-material.min.css'>
+    
+    <link rel='stylesheet' href='css/style.css'>
+    
+    <link rel='stylesheet prefetch' href='node_modules/angular-ui-router-anim-in-out/css/anim-in-out.css'>
+        
+    <link href="node_modules/mdi/css/materialdesignicons.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700" rel="stylesheet">
+    
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexibility/1.0.6/flexibility.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="localHackDay">
+<!--
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">        
+        <md-button class="md-icon-button" ui-sref="index" ng-if="!('index' | isState)" style="margin-left: 0;" aria-label="Back to Homepage">
+          <md-icon class="mdi mdi-arrow-left mdi-25px-fix mdi-fix white"></md-icon>
+        </md-button>
+        
+        <h2>
+          <span>Local Hack Day - Dashboard</span>
+        </h2>
+                
+        <md-progress-circular md-mode="indeterminate" md-diameter="20px" class="md-accent" style="margin-left: 10px;" ng-hide="!$root.progress"></md-progress-circular>
+        <span flex></span>
+        
+        <md-button  class="md-raised md-accent" style="margin-right: 0;" aria-label="Official Webpage" href="https://localhackday.mlh.io" target="_blank">
+            <md-icon class="mdi mdi-account mdi-25px"></md-icon>
+            Official Webpage
+        </md-button>
+      </div>
+    </md-toolbar>
+-->
+        
+    <div class="container" style="margin-top: 30px;">
+        <div ui-view class="anim-in-out anim-fade" data-anim-speed="400" data-anim-sync="true"></div>
+    </div>
+    
+    <div style="position: absolute; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.7); top: 0; left: 0;" ng-hide="!inProgress">
+        <md-progress-circular md-mode="indeterminate" md-diameter="100px" class="md-primary" style="margin-left: 10px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"></md-progress-circular>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    
+    <script src='node_modules/angular-animate/angular-animate.js'></script>
+    <script src='node_modules/angular-aria/angular-aria.js'></script>
+    <script src='node_modules/angular-material/angular-material.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.5.5/angular-sanitize.min.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+
+    <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+    
+    <script src='node_modules/angular-ui-router-anim-in-out/anim-in-out.js'></script>
+    
+    <script src='controllers.js'></script>
+</body></html>

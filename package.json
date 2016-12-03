@@ -1,0 +1,29 @@
+{
+  "name": "iliads-list",
+  "version": "1.0.0",
+  "description": "Cool links to checkout for devs & designers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theiliad/iliadslist.git"
+  },
+  "keywords": [
+    "tools",
+    "designers",
+    "developers"
+  ],
+  "author": "Eliad Moosavi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theiliad/iliadslist/issues"
+  },
+  "homepage": "https://github.com/theiliad/iliadslist#readme",
+  "dependencies": {
+    "angular": "^1.5.9",
+    "angular-animate": "^1.5.9",
+    "angular-aria": "^1.5.9",
+    "angular-ckeditor": "^0.3.1",
+    "angular-material": "^1.1.1",
+    "angular-ui-router-anim-in-out": "^1.0.2",
+    "mdi": "^1.7.22"
+  }
+}
