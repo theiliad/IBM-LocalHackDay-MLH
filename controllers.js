@@ -95,6 +95,13 @@ angular.module('localHackDay')
                 {title: 'Intro to Ardunio', time: '04:15 PM', duration: 25, by: 'Alex Hu', videoID: 'yyDd9IAaCok'},
                 {title: 'Intro to Vim', time: '04:45 PM', duration: 18, by: 'Alex Wheeler', videoID: 'Xp0cTB1llqU'},
                 {title: 'Intro to Machine Learning', time: '05:10 PM', duration: 42, by: 'Jamis Johnson', videoID: 'YneNKbK1D1w'}
+            ];
+            
+            $scope.resources = [
+                {title: 'FREE Domain Name!', href: 'https://www.domain.com/mlh', icon: 'web'},
+                {title: 'Devpost', href: 'https://localhackdayiii.devpost.com', icon: 'code-tags-check'},
+                {title: 'Slack', href: 'https://mlh-lhd-slack-invites.herokuapp.com', icon: 'slack'},
+                {title: 'Capture the Flag', href: 'https://mlh.io/watchdogs2', icon: 'gamepad-variant'}
             ]
             
             $scope.workshopDetails = function(item) {

@@ -1617,17 +1617,19 @@
             </span>
 
             <div class="postContent">
-                <md-list-item ng-repeat="item in schedule track by $index" ng-click="workshopDetails(item)">
-                    <strong style="font-weight: 700; margin-right: 15px;">{{item.time}}</strong>
-                    
-                    <p>{{item.title}} ({{item.duration}} minutes)</p>
-                    
-                    <p class="md-secondary" ng-if="item.title != 'Lunch!'">By {{item.by}}</p>
-                    
-                    <md-button class="md-secondary md-icon-button" ng-if="item.title != 'Lunch!'" ng-click="workshopDetails(item)" aria-label="Play">
-                        <md-icon class="mdi mdi-play-circle mdi-25px-fix"></md-icon>
-                    </md-button>
-                </md-list-item>
+                <md-list>
+                    <md-list-item ng-repeat="item in schedule track by $index" ng-click="workshopDetails(item)">
+                        <strong style="font-weight: 700; margin-right: 15px;">{{item.time}}</strong>
+
+                        <p>{{item.title}} ({{item.duration}} minutes)</p>
+
+                        <p class="md-secondary" ng-if="item.title != 'Lunch!'">By {{item.by}}</p>
+
+                        <md-button class="md-secondary md-icon-button" ng-if="item.title != 'Lunch!'" ng-click="workshopDetails(item)" aria-label="Play">
+                            <md-icon class="mdi mdi-play-circle mdi-25px-fix"></md-icon>
+                        </md-button>
+                    </md-list-item>
+                </md-list>
             </div>
           </md-card-title-text>
         </md-card-title>
@@ -1638,27 +1640,21 @@
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">
-                <md-icon class="mdi mdi-timetable mdi-25px"></md-icon>
-                Schedule
-            </span>
-            <span class="md-subhead" style="color: rgba(0, 0, 0, 0.5);">
-                By Author #{{post.Author}} on {{post.Date | date}}, in Categories {{post.Categories}}
+                <md-icon class="mdi mdi-crown mdi-25px mdi-space"></md-icon>
+                Links/Resources
             </span>
 
             <div class="postContent">
-                {{post.Content | limitTo: 50}}
+                <md-list>
+                    <md-list-item ng-repeat="item in resources track by $index" href="{{item.href}}" target="_blank">
+                        <p>
+                            <md-icon class="mdi mdi-{{item.icon}} mdi-25px" style="margin-top: -15px !important;"></md-icon>
+                            {{item.title}}
+                        </p>
+                    </md-list-item>
+                </md-list>
             </div>
           </md-card-title-text>
         </md-card-title>
-        <md-card-actions layout="row" layout-align="end center">
-          <md-button ng-click="likePost(post.Id)">
-              <md-icon class="mdi mdi-25px" ng-class="{'mdi-thumb-up-outline': !userLiked, 'mdi-thumb-up': userLiked}"></md-icon>
-              {{post.Likes}}
-          </md-button>
-
-          <md-button ng-click="readMore(key)">
-              Read More
-          </md-button>
-        </md-card-actions>
     </md-card>
 </div>
