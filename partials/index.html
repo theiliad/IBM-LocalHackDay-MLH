@@ -1608,7 +1608,7 @@
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline">
-                <md-icon class="mdi mdi-timetable mdi-25px"></md-icon>
+                <md-icon class="mdi mdi-timetable mdi-25px mdi-space"></md-icon>
                 Schedule
             </span>
             
@@ -1622,9 +1622,9 @@
                     
                     <p>{{item.title}} ({{item.duration}} minutes)</p>
                     
-                    <p class="md-secondary">By {{item.by}}</p>
+                    <p class="md-secondary" ng-if="item.title != 'Lunch!'">By {{item.by}}</p>
                     
-                    <md-button class="md-secondary md-icon-button">
+                    <md-button class="md-secondary md-icon-button" ng-if="item.title != 'Lunch!'">
                         <md-icon class="mdi mdi-play-circle mdi-25px-fix"></md-icon>
                     </md-button>
                 </md-list-item>

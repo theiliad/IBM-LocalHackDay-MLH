@@ -54,7 +54,20 @@ strong {
 }
 
 .mdi:before {
-    color: #2f2f2f;
+    color: #1565c0;
+}
+
+.mdi-play-circle:before {
+    color: #ff6e40;
+}
+
+.md-headline {
+    margin-left: 15px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 21px;
+    color: #1565c0;
+    border-bottom: 1px dashed #1565c0;
 }
 
 div.center {
@@ -326,7 +339,7 @@ md-icon {
 }
 
 .mdi-space {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .mdi-space-30 {

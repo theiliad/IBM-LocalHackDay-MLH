@@ -87,13 +87,13 @@ angular.module('localHackDay')
                 {title: 'Intro to Javascript', time: '10:45 AM', duration: 37, by: 'Cassidy Williams', videoID: 'lyh5IXq67UQ'},
                 {title: 'Intro to CSS Animations', time: '11:45 AM', duration: 28, by: 'Dana Lee', videoID: '6tqPOXhSqog'},
                 {title: 'Intro to Python', time: '12:25 PM', duration: 28, by: 'Helen and Carly', videoID: 'p9GawyOohWE'},
+                {title: 'Lunch!', time: '01:00 PM', duration: 60},
                 {title: 'Intro to Flask', time: '02:00 PM', duration: 20, by: 'Jack Cook', videoID: 'IErz9gbcWRc'},
-                {title: '', time: '10:00 AM', duration: 30, by: '', videoID: ''},
-                {title: '', time: '10:00 AM', duration: 30, by: '', videoID: ''},
-                {title: '', time: '10:00 AM', duration: 30, by: '', videoID: ''},
-                {title: '', time: '10:00 AM', duration: 30, by: '', videoID: ''},
-                {title: '', time: '10:00 AM', duration: 30, by: '', videoID: ''},
-                {title: '', time: '10:00 AM', duration: 30, by: '', videoID: ''},
-                {title: '', time: '10:00 AM', duration: 30, by: '', videoID: ''},
+                {title: 'Intro to Ruby on Rails', time: '02:25 PM', duration: 41, by: 'Swift', videoID: '8auf6j9EB1w'},
+                {title: 'Intro to Node.js', time: '03:10 PM', duration: 13, by: 'Steven Lu', videoID: 'UR8kK_aFNo8'},
+                {title: 'Intro to React.JS', time: '03:30 PM', duration: 36, by: 'Sam Agnew', videoID: 'bz2zPeNoVIc'},
+                {title: 'Intro to Ardunio', time: '04:15 PM', duration: 25, by: 'Alex Hu', videoID: 'yyDd9IAaCok'},
+                {title: 'Intro to Vim', time: '04:45 PM', duration: 18, by: 'Alex Wheeler', videoID: 'Xp0cTB1llqU'},
+                {title: 'Intro to Machine Learning', time: '05:10 PM', duration: 42, by: 'Jamis Johnson', videoID: 'YneNKbK1D1w'}
             ]
         });
